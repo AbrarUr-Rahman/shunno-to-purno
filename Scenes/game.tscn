@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpcn1e62d1vt2"]
+[gd_scene load_steps=3 format=3 uid="uid://bh1r07tbc5fe4"]
 
-[ext_resource type="PackedScene" uid="uid://nvu1bsas5jye" path="res://Scenes/male_player.tscn" id="1_tec6q"]
-[ext_resource type="PackedScene" uid="uid://gbqsaclwerml" path="res://Scenes/female_player.tscn" id="2_4xvvl"]
+[ext_resource type="PackedScene" uid="uid://cjhrltftvsn7o" path="res://scenes/man_player.tscn" id="1_iaxcr"]
+[ext_resource type="PackedScene" uid="uid://mofjvwu1ig5g" path="res://scenes/female_player.tscn" id="2_5vcgv"]
 
 [node name="Game" type="Node2D"]
 
-[node name="MalePlayer" parent="." instance=ExtResource("1_tec6q")]
-position = Vector2(118, 74)
+[node name="man player" parent="." instance=ExtResource("1_iaxcr")]
+position = Vector2(133, 101)
 
-[node name="FemalePlayer" parent="." instance=ExtResource("2_4xvvl")]
-position = Vector2(396, 68)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(135, 102)
+zoom = Vector2(4, 4)
+
+[node name="female player" parent="." instance=ExtResource("2_5vcgv")]
+position = Vector2(86, 105)

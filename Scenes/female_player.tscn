@@ -1,48 +1,54 @@
-[gd_scene load_steps=7 format=3 uid="uid://gbqsaclwerml"]
+[gd_scene load_steps=8 format=3 uid="uid://mofjvwu1ig5g"]
 
-[ext_resource type="Texture2D" uid="uid://8sv5tpr1hhys" path="res://assets/Sprites/woman.png" id="1_1p1k8"]
+[ext_resource type="Texture2D" uid="uid://bxh5m7cs4rkh1" path="res://assetes/sprite/female-fotor-bg-remover-20241118122017.png" id="1_apa6r"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_473us"]
-atlas = ExtResource("1_1p1k8")
-region = Rect2(0, 0, 63, 204)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ven2"]
+atlas = ExtResource("1_apa6r")
+region = Rect2(0, 0, 50, 166)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3gew7"]
-atlas = ExtResource("1_1p1k8")
-region = Rect2(126, 0, 63, 204)
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3sky"]
+atlas = ExtResource("1_apa6r")
+region = Rect2(50, 0, 50, 166)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_10yxu"]
-atlas = ExtResource("1_1p1k8")
-region = Rect2(445, 0, 89, 204)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k2q6"]
+atlas = ExtResource("1_apa6r")
+region = Rect2(100, 0, 50, 166)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b0b1h"]
-atlas = ExtResource("1_1p1k8")
-region = Rect2(532, 0, 76, 204)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljgih"]
+atlas = ExtResource("1_apa6r")
+region = Rect2(165, 0, 55, 166)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4kyd2"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_pv3a3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_473us")
+"texture": SubResource("AtlasTexture_2ven2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3gew7")
+"texture": SubResource("AtlasTexture_e3sky")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_10yxu")
+"texture": SubResource("AtlasTexture_5k2q6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b0b1h")
+"texture": SubResource("AtlasTexture_ljgih")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgnry"]
+size = Vector2(48, 107)
+
+[node name="female player" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(337, 233)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_4kyd2")
+sprite_frames = SubResource("SpriteFrames_pv3a3")
 autoplay = "default"
-frame_progress = 0.981133
+frame = 3
+frame_progress = 0.922954
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 4.5)
+shape = SubResource("RectangleShape2D_sgnry")

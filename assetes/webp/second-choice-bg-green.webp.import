@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j4lqbvjdbg7w"
-path="res://.godot/imported/man-Photoroom.png-a55989e08334dc52c38b0e6a9b70823c.ctex"
+uid="uid://b8arwijgstgp8"
+path="res://.godot/imported/second-choice-bg-green.webp-3ddcd622b4b35064efc982ce26a48b0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/man-Photoroom.png"
-dest_files=["res://.godot/imported/man-Photoroom.png-a55989e08334dc52c38b0e6a9b70823c.ctex"]
+source_file="res://assetes/webp/second-choice-bg-green.webp"
+dest_files=["res://.godot/imported/second-choice-bg-green.webp-3ddcd622b4b35064efc982ce26a48b0c.ctex"]
 
 [params]
 
