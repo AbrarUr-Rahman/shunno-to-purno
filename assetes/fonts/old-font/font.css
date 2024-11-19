@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'alinur';
+  src: url('subset-LiAlinurBoisakhUnicodeItalic.woff2') format('woff2'),
+    url('subset-LiAlinurBoisakhUnicodeItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'alinur';
+  src: url('subset-LiAlinurBoisakhUnicode.woff2') format('woff2'),
+    url('subset-LiAlinurBoisakhUnicode.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
