@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c5mwp5mvlpjw5" path="res://assetes/webp/welcome.webp" id="1_xaiky"]
 [ext_resource type="PackedScene" uid="uid://ceuo000ep8fek" path="res://scenes/porer_dhap.tscn" id="3_3w50g"]
 
-[node name="level-3" type="Control"]
+[node name="level-2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

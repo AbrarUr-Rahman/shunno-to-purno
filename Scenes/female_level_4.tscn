@@ -20,10 +20,11 @@ offset_bottom = 648.0
 texture = ExtResource("1_bn5da")
 expand_mode = 1
 
-[node name="text" type="Label" parent="Backround"]
-offset_left = 38.0
+[node name="text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 37.0
 offset_top = 507.0
-offset_right = 695.0
+offset_right = 694.0
 offset_bottom = 615.0
 theme_override_fonts/font = ExtResource("2_cgcye")
 theme_override_font_sizes/font_size = 15
@@ -31,7 +32,8 @@ text = "ধরে নিন, আপনি শহরে বাস করেন।
  এখন আপনার কাছে আছে। পয়েন্ট ব্যয় করে একটি মাসের সবচেয়ে প্রয়োজনীয় চাহিদা ও সেবাগুলো (যেমন:
  বাড়িভাড়া, খাবার, পড়ালেখা, ইত্যাদি ) উপভোগ করুন।"
 
-[node name="Button2" parent="." instance=ExtResource("3_fpsjr")]
+[node name="Button" parent="." instance=ExtResource("3_fpsjr")]
+layout_mode = 0
 offset_left = 856.0
 offset_top = 504.0
 offset_right = 1105.0

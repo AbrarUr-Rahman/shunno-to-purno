@@ -29,7 +29,7 @@ offset_right = 1108.0
 offset_bottom = 593.0
 theme_override_font_sizes/font_size = 38
 
-[node name="Label" type="Label" parent="."]
+[node name="text" type="Label" parent="."]
 layout_mode = 0
 offset_left = 38.0
 offset_top = 507.0

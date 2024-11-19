@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://b31wxji035cjd"]
+
+[ext_resource type="Texture2D" uid="uid://cs75g8gaupm8o" path="res://assetes/webp/cityarrive-female@2x.webp" id="1_iikbf"]
+[ext_resource type="PackedScene" uid="uid://ceuo000ep8fek" path="res://scenes/porer_dhap.tscn" id="2_newwk"]
+[ext_resource type="PackedScene" uid="uid://mofjvwu1ig5g" path="res://scenes/female_player.tscn" id="3_st2lx"]
+[ext_resource type="FontFile" uid="uid://dw6aj5at5rh0l" path="res://assetes/fonts/LiAlinurKurigramUnicode.woff" id="4_baniq"]
+
+[sub_resource type="Animation" id="Animation_32oce"]
+resource_name = "walking"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(62, 343), Vector2(818, 343)]
+}
+
+[sub_resource type="Animation" id="Animation_i422c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(62, 343)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g7aba"]
+_data = {
+"RESET": SubResource("Animation_i422c"),
+"walking": SubResource("Animation_32oce")
+}
+
+[node name="female_level_6" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backround" type="TextureRect" parent="."]
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 647.0
+texture = ExtResource("1_iikbf")
+expand_mode = 1
+
+[node name="Button2" parent="." instance=ExtResource("2_newwk")]
+offset_left = 856.0
+offset_top = 504.0
+offset_right = 1105.0
+offset_bottom = 590.0
+theme_override_font_sizes/font_size = 38
+
+[node name="female player" parent="." instance=ExtResource("3_st2lx")]
+position = Vector2(62, 343)
+rotation = 6.28319
+scale = Vector2(1.985, 1.985)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="female player"]
+libraries = {
+"": SubResource("AnimationLibrary_g7aba")
+}
+autoplay = "walking"
+speed_scale = 0.5
+
+[node name="text" type="Label" parent="."]
+offset_left = 37.0
+offset_top = 507.0
+offset_right = 694.0
+offset_bottom = 615.0
+theme_override_fonts/font = ExtResource("4_baniq")
+theme_override_font_sizes/font_size = 15
+text = "ধরে নিন, আপনি শহরে বাস করেন। আপনার আয় স্বল্প। প্রতি মাসে আপনার নিয়মিত আয় ১২ পয়েন্ট – যা
+ এখন আপনার কাছে আছে। পয়েন্ট ব্যয় করে একটি মাসের সবচেয়ে প্রয়োজনীয় চাহিদা ও সেবাগুলো (যেমন:
+ বাড়িভাড়া, খাবার, পড়ালেখা, ইত্যাদি ) উপভোগ করুন।"

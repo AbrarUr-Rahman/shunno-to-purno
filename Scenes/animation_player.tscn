@@ -1,24 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://mofjvwu1ig5g"]
+[gd_scene load_steps=8 format=3 uid="uid://dbpk0ef1vi1bq"]
 
-[ext_resource type="Texture2D" uid="uid://bxh5m7cs4rkh1" path="res://assetes/sprite/female-fotor-bg-remover-20241118122017.png" id="1_apa6r"]
+[ext_resource type="Texture2D" uid="uid://bxh5m7cs4rkh1" path="res://assetes/sprite/female-fotor-bg-remover-20241118122017.png" id="1_b74au"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1uxoh"]
-atlas = ExtResource("1_apa6r")
+atlas = ExtResource("1_b74au")
 region = Rect2(0, 0, 52, 166)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3yn8u"]
-atlas = ExtResource("1_apa6r")
+atlas = ExtResource("1_b74au")
 region = Rect2(52, 0, 52, 166)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4limc"]
-atlas = ExtResource("1_apa6r")
+atlas = ExtResource("1_b74au")
 region = Rect2(104, 0, 52, 166)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8k35"]
-atlas = ExtResource("1_apa6r")
+atlas = ExtResource("1_b74au")
 region = Rect2(159, 0, 53, 166)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_48m41"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ao0s"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -38,16 +38,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hbd1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbvfs"]
 size = Vector2(50.5, 108)
 
-[node name="female player" type="CharacterBody2D"]
+[node name="animation player" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_48m41")
+sprite_frames = SubResource("SpriteFrames_8ao0s")
 autoplay = "default"
-frame_progress = 0.489325
+frame = 2
+frame_progress = 0.588503
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.25, 5)
-shape = SubResource("RectangleShape2D_5hbd1")
+shape = SubResource("RectangleShape2D_pbvfs")
