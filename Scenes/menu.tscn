@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwa0qg25uee5"]
+[gd_scene load_steps=5 format=3 uid="uid://dwa0qg25uee5"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_pnkpj"]
 [ext_resource type="Texture2D" uid="uid://cb6e3ytoi4jse" path="res://assets/images/home-screen-bg@2x.png" id="2_4txsb"]
 [ext_resource type="FontFile" uid="uid://dflfvvlubatt6" path="res://assets/fonts/LiAlinurKurigramUnicode.woff" id="2_jhuvo"]
-[ext_resource type="Texture2D" uid="uid://d03vdpu2i4o2b" path="res://assets/textures/btn.png" id="4_nypfh"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fqgft"]
-texture = ExtResource("4_nypfh")
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="3_iy6g8"]
 
 [node name="Start page" type="Control"]
 layout_mode = 3
@@ -28,32 +25,14 @@ offset_bottom = 643.0
 texture = ExtResource("2_4txsb")
 expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-z_index = 5
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -117.0
-offset_top = -175.0
-offset_right = 117.0
-offset_bottom = -131.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(0.619608, 0.0156863, 0.447059, 1)
+[node name="Button" parent="." instance=ExtResource("3_iy6g8")]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 500.0
+offset_right = 687.0
+offset_bottom = 568.0
 theme_override_fonts/font = ExtResource("2_jhuvo")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_fqgft")
 text = "শুরু করুন"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
