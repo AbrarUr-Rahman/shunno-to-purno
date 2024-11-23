@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Godot Game</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+      }
+
+      #canvas {
+        position: absolute;
+        background-color: black;
+        transform-origin: center center;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script src="index.js"></script>
+    <script>
+      (function () {
+        const canvas = document.getElementById("canvas");
+        let isPortrait = false;
+
+        /**
+         * Resize canvas and handle orientation.
+         */
+        function resizeCanvas() {
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+
+          if (windowWidth < windowHeight) {
+            // Portrait mode: Rotate canvas for landscape
+            canvas.style.transform = "rotate(90deg)";
+            canvas.style.width = `${windowHeight}px`;
+            canvas.style.height = `${windowWidth}px`;
+            canvas.style.left = `${(windowWidth - windowHeight) / 2}px`;
+            canvas.style.top = `${(windowHeight - windowWidth) / 2}px`;
+            isPortrait = true;
+          } else {
+            // Landscape mode: Fullscreen
+            canvas.style.transform = "none";
+            canvas.style.width = `${windowWidth}px`;
+            canvas.style.height = `${windowHeight}px`;
+            canvas.style.left = "0";
+            canvas.style.top = "0";
+            isPortrait = false;
+          }
+
+          // Adjust canvas resolution for Godot
+          canvas.width = Math.max(windowWidth, windowHeight);
+          canvas.height = Math.min(windowWidth, windowHeight);
+        }
+
+        /**
+         * Pass input events directly to Godot
+         */
+        function passInputToGodot(event) {
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+
+          let adjustedX = event.clientX;
+          let adjustedY = event.clientY;
+
+          if (isPortrait) {
+            // Remap coordinates for portrait mode
+            const tempX = adjustedX;
+            adjustedX = adjustedY;
+            adjustedY = windowWidth - tempX;
+          }
+
+          // Dispatch the event on the canvas
+          const simulatedEvent = new MouseEvent(event.type, {
+            bubbles: true,
+            cancelable: true,
+            clientX: adjustedX,
+            clientY: adjustedY,
+          });
+          canvas.dispatchEvent(simulatedEvent);
+        }
+
+        /**
+         * Attach event listeners to pass inputs
+         */
+        function attachInputListeners() {
+          const inputEvents = [
+            "mousedown",
+            "mouseup",
+            "mousemove",
+            "click",
+            "touchstart",
+            "touchmove",
+            "touchend",
+          ];
+          inputEvents.forEach((eventName) => {
+            window.addEventListener(eventName, passInputToGodot);
+          });
+        }
+
+        /**
+         * Initialize the Godot game.
+         */
+        function initializeGame() {
+          const GODOT_CONFIG = {
+            args: [],
+            canvasResizePolicy: 2,
+            executable: "index",
+            fileSizes: {
+              "index.pck": 21756160,
+              "index.wasm": 35376909,
+            },
+            focusCanvas: true,
+          };
+
+          const engine = new Engine(GODOT_CONFIG);
+
+          engine
+            .startGame({
+              onProgress: (current, total) => {
+                console.log(`Loading progress: ${current} / ${total}`);
+              },
+            })
+            .then(() => {
+              console.log("Game started successfully.");
+            })
+            .catch((error) => {
+              console.error("Failed to start the Godot game:", error);
+            });
+        }
+
+        // Resize canvas and attach listeners
+        resizeCanvas();
+        attachInputListeners();
+
+        // Add event listeners for resizing and initialization
+        window.addEventListener("resize", resizeCanvas);
+        window.addEventListener("load", initializeGame);
+      })();
+    </script>
+  </body>
+</html>
