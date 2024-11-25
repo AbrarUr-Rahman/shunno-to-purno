@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dbpk0ef1vi1bq"]
 
-[ext_resource type="Texture2D" uid="uid://bxh5m7cs4rkh1" path="res://assetes/sprite/female-fotor-bg-remover-20241118122017.png" id="1_b74au"]
+[ext_resource type="Texture2D" uid="uid://bxh5m7cs4rkh1" path="res://assets/sprite/female-fotor-bg-remover-20241118122017.png" id="1_b74au"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1uxoh"]
 atlas = ExtResource("1_b74au")

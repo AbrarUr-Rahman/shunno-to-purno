@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://oxwk7757l1sc"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_ect4v"]
-[ext_resource type="Texture2D" uid="uid://c5mwp5mvlpjw5" path="res://assetes/webp/welcome.webp" id="1_xaiky"]
+[ext_resource type="Texture2D" uid="uid://c5mwp5mvlpjw5" path="res://assets/webp/welcome.webp" id="1_xaiky"]
 [ext_resource type="PackedScene" uid="uid://ceuo000ep8fek" path="res://scenes/porer_dhap.tscn" id="3_3w50g"]
 
 [node name="level-2" type="Control"]
