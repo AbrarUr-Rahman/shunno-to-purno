@@ -4,6 +4,21 @@
 [ext_resource type="PackedScene" uid="uid://ceuo000ep8fek" path="res://scenes/porer_dhap.tscn" id="2_m1ncv"]
 [ext_resource type="PackedScene" uid="uid://gbqsaclwerml" path="res://scenes/female_player.tscn" id="3_2cft7"]
 
+[sub_resource type="Animation" id="Animation_ipmrp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(520, 5)]
+}
+
 [sub_resource type="Animation" id="Animation_mnug3"]
 resource_name = "female_move"
 length = 2.0
@@ -18,21 +33,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(520, 5), Vector2(881, 5)]
-}
-
-[sub_resource type="Animation" id="Animation_ipmrp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(520, 5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w5wf7"]

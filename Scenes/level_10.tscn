@@ -1,21 +1,27 @@
-[gd_scene load_steps=13 format=3 uid="uid://okol67fj67gb"]
+[gd_scene load_steps=14 format=3 uid="uid://okol67fj67gb"]
 
+[ext_resource type="Script" path="res://scripts/level_10.gd" id="1_1b3cw"]
 [ext_resource type="Texture2D" uid="uid://brnbxka7prqo3" path="res://assets/webp/backgroundImage.webp" id="1_oa8i8"]
 [ext_resource type="PackedScene" uid="uid://ceuo000ep8fek" path="res://scenes/porer_dhap.tscn" id="2_wcnsb"]
 [ext_resource type="FontFile" uid="uid://dw6aj5at5rh0l" path="res://assets/fonts/LiAlinurKurigramUnicode.woff" id="3_mdqg5"]
-[ext_resource type="Texture2D" uid="uid://d1v4tr4m8461t" path="res://assets/webp/screen-4-border.svg" id="4_rt4if"]
-[ext_resource type="Texture2D" uid="uid://drgigmfj87ak1" path="res://assets/webp/image1.webp" id="5_e1rm3"]
+[ext_resource type="Texture2D" uid="uid://w484duwqokmi" path="res://assets/webp/life-path-option/screen-8-border.png" id="5_m4kiw"]
 [ext_resource type="FontFile" uid="uid://ba6t0et4hwg55" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="6_8w5k1"]
-[ext_resource type="Texture2D" uid="uid://s5imt1w7nkub" path="res://assets/webp/image2.webp" id="7_doshb"]
-[ext_resource type="Texture2D" uid="uid://dmga6wxqijyd0" path="res://assets/webp/image3.webp" id="8_tiyox"]
-[ext_resource type="Texture2D" uid="uid://cqrdgxu16ljx5" path="res://assets/webp/image4.webp" id="9_sx0c5"]
-[ext_resource type="Texture2D" uid="uid://ctlw4xcqixlsh" path="res://assets/webp/image5.webp" id="10_jiv7h"]
+[ext_resource type="Texture2D" uid="uid://bwgfmsrv7tdqr" path="res://assets/webp/life-path-option/Group 627@2x.png" id="10_xpcuk"]
 [ext_resource type="Texture2D" uid="uid://bn3i5oelo1m7s" path="res://assets/webp/coin-12.webp" id="11_ppwbt"]
+[ext_resource type="Texture2D" uid="uid://crkvro0mthefi" path="res://assets/webp/life-path-option/Group 628@2x.png" id="11_ubeq2"]
+[ext_resource type="Texture2D" uid="uid://c54fmonmyrqod" path="res://assets/webp/life-path-option/Group 630@2x.png" id="12_klo45"]
+[ext_resource type="Texture2D" uid="uid://blpk5f5excd7s" path="res://assets/webp/life-path-option/Group 631@2x.png" id="13_ugo2d"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihca2"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_082ad"]
+bg_color = Color(0.72549, 0.678431, 0.00392157, 1)
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qaxu3"]
+bg_color = Color(0.72549, 0.678431, 0.00392157, 1)
 border_width_left = 2
 border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_detail = 3
 
 [node name="level_10" type="Control"]
 layout_mode = 3
@@ -24,6 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1b3cw")
 
 [node name="Backround" type="TextureRect" parent="."]
 layout_mode = 0
@@ -66,241 +73,6 @@ text = "অভিনন্দন!!!
 "
 autowrap_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="Backround"]
-layout_mode = 0
-offset_left = 45.0
-offset_top = 42.0
-offset_right = 1384.0
-offset_bottom = 479.0
-scale = Vector2(0.8, 0.922)
-theme_override_constants/h_separation = 10
-columns = 3
-
-[node name="TextureButton" type="TextureButton" parent="Backround/GridContainer"]
-layout_mode = 2
-texture_normal = ExtResource("4_rt4if")
-
-[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 10.0
-offset_right = 271.0
-offset_bottom = 200.0
-texture = ExtResource("5_e1rm3")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton"]
-z_index = 5
-texture_filter = 2
-layout_mode = 0
-offset_left = 9.0
-offset_top = 146.0
-offset_right = 273.0
-offset_bottom = 202.0
-theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
-theme_override_fonts/font = ExtResource("6_8w5k1")
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihca2")
-text = "যাতায়াত"
-
-[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton"]
-z_index = 5
-texture_filter = 2
-layout_mode = 0
-offset_left = 9.0
-offset_top = 9.0
-offset_right = 36.0
-offset_bottom = 146.0
-theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
-theme_override_fonts/font = ExtResource("6_8w5k1")
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihca2")
-text = "২
-প
-য়ে
-ন্ট"
-autowrap_mode = 2
-
-[node name="TextureButton2" type="TextureButton" parent="Backround/GridContainer"]
-layout_mode = 2
-texture_normal = ExtResource("4_rt4if")
-
-[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton2"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 10.0
-offset_right = 271.0
-offset_bottom = 200.0
-texture = ExtResource("7_doshb")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton2"]
-z_index = 5
-texture_filter = 2
-layout_mode = 0
-offset_left = 9.0
-offset_top = 146.0
-offset_right = 273.0
-offset_bottom = 202.0
-theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
-theme_override_fonts/font = ExtResource("6_8w5k1")
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihca2")
-text = "যাতায়াত"
-
-[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton2"]
-z_index = 5
-texture_filter = 2
-layout_mode = 0
-offset_left = 9.0
-offset_top = 9.0
-offset_right = 36.0
-offset_bottom = 146.0
-theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
-theme_override_fonts/font = ExtResource("6_8w5k1")
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihca2")
-text = "২
-প
-য়ে
-ন্ট"
-autowrap_mode = 2
-
-[node name="TextureButton3" type="TextureButton" parent="Backround/GridContainer"]
-layout_mode = 2
-texture_normal = ExtResource("4_rt4if")
-
-[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton3"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 10.0
-offset_right = 271.0
-offset_bottom = 200.0
-texture = ExtResource("8_tiyox")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton3"]
-z_index = 5
-texture_filter = 2
-layout_mode = 0
-offset_left = 9.0
-offset_top = 146.0
-offset_right = 273.0
-offset_bottom = 202.0
-theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
-theme_override_fonts/font = ExtResource("6_8w5k1")
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihca2")
-text = "যাতায়াত"
-
-[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton3"]
-z_index = 5
-texture_filter = 2
-layout_mode = 0
-offset_left = 9.0
-offset_top = 9.0
-offset_right = 36.0
-offset_bottom = 146.0
-theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
-theme_override_fonts/font = ExtResource("6_8w5k1")
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihca2")
-text = "২
-প
-য়ে
-ন্ট"
-autowrap_mode = 2
-
-[node name="TextureButton4" type="TextureButton" parent="Backround/GridContainer"]
-layout_mode = 2
-texture_normal = ExtResource("4_rt4if")
-
-[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton4"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 10.0
-offset_right = 271.0
-offset_bottom = 200.0
-texture = ExtResource("9_sx0c5")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton4"]
-z_index = 5
-texture_filter = 2
-layout_mode = 0
-offset_left = 9.0
-offset_top = 146.0
-offset_right = 273.0
-offset_bottom = 202.0
-theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
-theme_override_fonts/font = ExtResource("6_8w5k1")
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihca2")
-text = "যাতায়াত"
-
-[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton4"]
-z_index = 5
-texture_filter = 2
-layout_mode = 0
-offset_left = 9.0
-offset_top = 9.0
-offset_right = 36.0
-offset_bottom = 146.0
-theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
-theme_override_fonts/font = ExtResource("6_8w5k1")
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihca2")
-text = "২
-প
-য়ে
-ন্ট"
-autowrap_mode = 2
-
-[node name="TextureButton5" type="TextureButton" parent="Backround/GridContainer"]
-layout_mode = 2
-texture_normal = ExtResource("4_rt4if")
-
-[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton5"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 10.0
-offset_right = 271.0
-offset_bottom = 200.0
-texture = ExtResource("10_jiv7h")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton5"]
-z_index = 5
-texture_filter = 2
-layout_mode = 0
-offset_left = 9.0
-offset_top = 146.0
-offset_right = 273.0
-offset_bottom = 202.0
-theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
-theme_override_fonts/font = ExtResource("6_8w5k1")
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihca2")
-text = "যাতায়াত"
-
-[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton5"]
-z_index = 5
-texture_filter = 2
-layout_mode = 0
-offset_left = 9.0
-offset_top = 9.0
-offset_right = 36.0
-offset_bottom = 146.0
-theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
-theme_override_fonts/font = ExtResource("6_8w5k1")
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_ihca2")
-text = "২
-প
-য়ে
-ন্ট"
-autowrap_mode = 2
-
 [node name="TextureRect" type="TextureRect" parent="Backround"]
 layout_mode = 0
 offset_left = 831.0
@@ -313,12 +85,257 @@ texture = ExtResource("11_ppwbt")
 expand_mode = 2
 stretch_mode = 4
 
+[node name="GridContainer" type="GridContainer" parent="Backround"]
+offset_right = 2582.0
+offset_bottom = 732.0
+scale = Vector2(0.4, 0.5)
+pivot_offset = Vector2(100, 100)
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="TextureButton4" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_m4kiw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton4"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 14.0
+offset_right = 406.0
+offset_bottom = 346.0
+texture = ExtResource("10_xpcuk")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton4"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 27.0
+offset_top = 290.0
+offset_right = 405.0
+offset_bottom = 346.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8w5k1")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_082ad")
+text = "একটুু হলেও সঞ্চয়"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton4"]
+z_index = 5
+texture_filter = 2
+offset_left = 28.0
+offset_top = 16.0
+offset_right = 94.0
+offset_bottom = 290.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8w5k1")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_qaxu3")
+text = "২
+প
+য়ে
+ন্ট"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureButton5" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_m4kiw")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton5"]
+layout_mode = 0
+offset_left = 19.5
+offset_top = 16.0
+offset_right = 410.5
+offset_bottom = 354.0
+texture = ExtResource("11_ubeq2")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton5"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 25.0
+offset_top = 292.0
+offset_right = 408.0
+offset_bottom = 354.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8w5k1")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_082ad")
+text = " একের বেশী আয়ের উপায় তৈরি "
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton5"]
+z_index = 5
+texture_filter = 2
+offset_left = 21.0
+offset_top = 16.0
+offset_right = 84.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8w5k1")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_qaxu3")
+text = "২
+প
+য়ে
+ন্ট"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureButton7" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_m4kiw")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton7"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 16.0
+offset_right = 410.0
+offset_bottom = 346.0
+texture = ExtResource("12_klo45")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton7"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 15.0
+offset_top = 298.0
+offset_right = 408.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8w5k1")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_082ad")
+text = " আত্মীয় থেকে সহায়তা"
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton7"]
+z_index = 5
+texture_filter = 2
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 92.0
+offset_bottom = 302.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8w5k1")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_qaxu3")
+text = "২
+প
+য়ে
+ন্ট"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureButton8" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_m4kiw")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton8"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 18.0
+offset_right = 409.0
+offset_bottom = 352.0
+texture = ExtResource("13_ugo2d")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton8"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 294.0
+offset_right = 408.0
+offset_bottom = 349.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8w5k1")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_082ad")
+text = " রেজিস্ট্রেশনবিহীন কোম্পানিতে  বিনিয়োগ"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton8"]
+z_index = 5
+texture_filter = 2
+offset_left = 18.0
+offset_top = 16.0
+offset_right = 90.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8w5k1")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_qaxu3")
+text = "২
+প
+য়ে
+ন্ট"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureButton9" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_m4kiw")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton9"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 18.0
+offset_right = 409.0
+offset_bottom = 352.0
+texture = ExtResource("13_ugo2d")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton9"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 294.0
+offset_right = 408.0
+offset_bottom = 349.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8w5k1")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_082ad")
+text = " রেজিস্ট্রেশনবিহীন কোম্পানিতে  বিনিয়োগ"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton9"]
+z_index = 5
+texture_filter = 2
+offset_left = 16.0
+offset_top = 20.0
+offset_right = 90.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8w5k1")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_qaxu3")
+text = "২
+প
+য়ে
+ন্ট"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 33.0
-offset_top = 38.0
-offset_right = 1120.0
-offset_bottom = 444.0
+offset_left = 35.0
+offset_top = 43.0
+offset_right = 1122.0
+offset_bottom = 449.0
 
 [node name="Label" type="Label" parent="Label"]
 texture_filter = 2

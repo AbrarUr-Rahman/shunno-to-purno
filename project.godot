@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="upg-game"
-run/main_scene="res://scenes/road_level_female_6.tscn"
+run/main_scene="res://scenes/level_9.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://scripts/globals.gd"
 
 [rendering]
 

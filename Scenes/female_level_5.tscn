@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dw33b0yruaaq2" path="res://assets/webp/roadmap1-male@2x.webp" id="2_0s1qq"]
 [ext_resource type="PackedScene" uid="uid://ceuo000ep8fek" path="res://scenes/porer_dhap.tscn" id="4_rwre0"]
-[ext_resource type="PackedScene" uid="uid://mofjvwu1ig5g" path="res://scenes/female_player.tscn" id="5_fq38f"]
+[ext_resource type="PackedScene" uid="uid://gbqsaclwerml" path="res://scenes/female_player.tscn" id="5_fq38f"]
 
 [sub_resource type="Animation" id="Animation_nq6c6"]
 length = 0.001
